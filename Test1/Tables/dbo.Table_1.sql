@@ -6,7 +6,12 @@ CREATE TABLE [dbo].[Table_1] (
 		[New_column_1]     [nchar](10) COLLATE Latin1_General_CI_AS_KS_WS NULL,
 		[New_column_2]     [nchar](10) COLLATE Latin1_General_CI_AS_KS_WS NULL,
 		[New_column_3]     [nchar](10) COLLATE Latin1_General_CI_AS_KS_WS NULL,
-		[New_column_4]     [nchar](10) COLLATE Latin1_General_CI_AS_KS_WS NULL
+		[New_column_4]     [nchar](10) COLLATE Latin1_General_CI_AS_KS_WS NULL,
+		[Table_1_Id]       [int] NOT NULL,
+		CONSTRAINT [Table_1_PK]
+		PRIMARY KEY
+		NONCLUSTERED
+		([Table_1_Id])
 ) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Table_1] SET (LOCK_ESCALATION = TABLE)
